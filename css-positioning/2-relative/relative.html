@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Relative Position</title>
+  <style>
+    .relative1 {
+    position: relative;
+  }
+  .relative2 {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(255, 200, 200);
+    width: 500px;
+  }
+  </style>
+</head>
+<body>
+  <div class="relative1">
+      relative behaves the same as static unless you add some extra properties.
+  </div>
+  <div class="relative2">
+    Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pseduo Classes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- :required -->
+<section class="example-cntr required">    
+  <h1>CSS <code>:Pseudo-Class</code></h1>
+    <form>
+    <label>Name:
+      <input type="text" id="name" required>
+      <small>This field with blue border is <span class="blue">required</span></small>
+    </label>
+    <label>Email <small>(optional)</small>:
+      <input type="email" id="email">
+      <small>Enter a wrong email to see red border</small>:
+    </label>   
+    <label>
+      <input type="checkbox">
+      <span class="label-text" check="checked">I Accept it</span>
+    </label>
+    <button type="submit">Send</button> 
+  </form>
+</section>
+</body>
+</html>

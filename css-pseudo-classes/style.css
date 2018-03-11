@@ -1,0 +1,215 @@
+/* Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Archivo+Narrow:700); /*Thick font*/
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two); /*Script font*/
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic); /*Reading font*/
+@import url(https://use.fontawesome.com/releases/v5.0.8/css/all.css);
+
+
+
+/* Here we add Pesudo Classes */
+/* input-and-links.html */
+
+/* we use :required to give a live feedback 
+  to the user that this field is must be filled 
+*/
+
+input[type=text]:required {
+  border-left: 4px solid #297dfc
+}
+
+/* we use :invalid to give a live feedback 
+  to the user to enter correct email address
+*/
+input[type=email]:invalid {
+  border: 2px solid #fc2929
+}
+
+/* we use :hover to give a live feedback 
+  to the user this is a Button needs to take an action
+*/
+
+button:hover {
+  background: #1b64d1;
+}
+
+/* we use :checked to do things when user checks an item */
+/* 
+  Here in this example we using Pseudo Elements (before,after) with checked
+  to insert fake content inside <span> elements like icons,text.
+*/
+
+label input[type="checkbox"] {
+  display: none;
+}
+label input[type="checkbox"] + span.label-text:before {
+  content: "\f0c8";
+  font-family: "Font Awesome 5 Free";
+  color: #cccccc;
+  margin-right: 5px;
+}
+label input[type="checkbox"]:checked + span.label-text:before {
+  content: "\f14a";
+  color: #297dfc;
+}
+
+/* elements.html */
+/* 
+  Selects any <li> that is the first element among its siblings (brothers)
+*/
+.example1 li:first-child {
+  color: rgb(28, 88, 255);
+}
+
+/* Selects every fourth <li> element among any group of siblings */
+.example2 li:nth-child(2n) {
+  color: rgb(28, 88, 255);
+}
+/* Selects third <li> element among it's group of siblings */
+.example2 li:nth-child(3) {
+  color: rgb(255, 0, 179);
+}
+/* Selects any <li> that is the Last element among its siblings */
+.example3 li:last-child {
+    color: rgb(255, 0, 179);
+  }
+
+
+
+
+
+
+
+/* Global Style */
+*, *:before, *:after { box-sizing:border-box; }
+html { height: 100%; }
+body { 
+  padding: 30px;
+  color: #647086;
+  text-align: left;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background: #f8f8f8;
+  outline: 0;
+}
+
+a{ color:lighten(#c90,20); }
+p {
+  line-height: 1.7;
+}
+
+hr { margin: 30px auto;  border: none; border-top: #666 1px dotted; }
+h1 { text-align: center; margin-top: 0; text-transform: capitalize; }
+ul { padding-left: 15px; }
+li { margin-bottom: 20px; }
+
+time { font-size: 12px; color:rgba(white,.2); }
+
+code, pre { 
+  padding: 5px;
+  font-style: italic;
+  background: rgb(99, 112, 134);
+  font: 14px Courier;
+  box-shadow: inset 0 0 1px rgba(0,0,0,.5);
+  color: #f7f7fc;
+}
+
+h1 {
+    font-size: 22px;
+    text-transform: none;
+}
+code { font-size: 1em; }
+input, label { 
+  cursor: pointer; 
+}
+input[type=text],
+input[type=email] { 
+  width: 100%;
+  outline: 0;
+}
+label {
+  padding: 3px 8px 5px;
+  border-radius: 2px;
+  border: transparent 1px solid;    
+}
+.example-cntr {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  padding: 30px;
+  box-shadow: 0px 7px 20px rgba(0,0,0,.1);
+  background: rgba(244, 244, 244, 0.76);
+}
+form {
+  min-width: 500px;
+  padding: 20px;
+  border: #dfdfdf 2px solid;
+  border-radius: 2px;
+}
+small:not(:first-child) {
+  font-size: 14px;
+  color: #a3a3a3;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+.required:required {
+  box-shadow: inset 5px 0 0 rgba(41, 99, 189, .8);
+}
+.required .blue {
+  display: inline-block;
+  padding: 0 5px;
+  background: rgb(99, 112, 134);
+  color: #f7f7fc;
+}
+form {     
+  width: 300px;
+  margin: 0 auto; }
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+input, textarea {
+  height: auto !important;
+  margin: 5px 0 !important;
+  padding: 10px !important;
+  border: none;
+  border-radius: 2px;
+  font-size: 18px;
+  cursor: text;
+}
+button {
+  margin-left: 10px;
+  padding: 10px 35px;
+  font: bold 1em 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  color: white;
+  border: 3px solid rgb(35, 97, 192);
+  border-radius: 2px;
+  cursor: pointer;
+  background: #297dfc;
+}
+ol {
+  width: 200px;
+  margin: 50px 10px 30px;
+  padding: 20px 20px 10px 50px;
+  border-radius: 2px;
+  text-align: left;
+  font-size: 1em;
+  background: rgb(230, 234, 242);
+  position: relative;
+  display: inline-block;
+}
+ol:before {
+  display: inline-block;
+  padding: 10px;        
+  position: absolute;
+  top: -27px; 
+  left: 0;
+  line-height: .5;
+  color: rgb(255, 255, 255, .6);
+  font-size: 14px;
+  border-radius: 5px 5px 0 0;
+  background: rgb(98, 111, 134);
+}
+.example1:before { content: ":first-child"; color: #dde6f6; }
+.example2:before { content: ":nth-child()"; color: #dde6f6; }
+.example3:before { content: ":last-child"; color: #dde6f6; }
+.ex4:before { content: "example 4"; color: $y; } */
