@@ -1,2 +1,2 @@
-# css-under-the-hood
+# CSS Under The Hood
 Core foundation of CSS
